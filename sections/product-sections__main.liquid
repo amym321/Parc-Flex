@@ -191,6 +191,10 @@
                   {% comment %} Name {% endcomment %}
                   <h1 class="product_name title">{{ product.title }}</h1>
 
+                  {% comment %} added code - am. added judge.me reviews {% endcomment %}
+                  <!-- {% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', jm_style: '', concierge_install: true, product: product %} -->
+
+
                   {% for tag in product.tags %}
                     {% if tag contains 'meta-size-chart-' %}
                       {% assign meta-size-chart = true %}
@@ -454,6 +458,13 @@
 <div class="is-hidden">
   <div id="shopify-product-reviews" data-id="{{ product.id }}">{{ product.metafields.spr.reviews }}</div>
 </div>
+
+{% comment %} added code - am. added judge.me reviews {% endcomment %}
+<!-- <div style="width: 90%; margin: auto;">
+  <div id="judgeme-reviews">
+    {% render 'judgeme_widgets', widget_type: 'judgeme_review_widget', concierge_install: true, product: product %}
+  </div>
+</div> -->
 
 {% comment %} Shopify-XR {% endcomment %}
 {% if product.media %}
