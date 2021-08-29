@@ -17690,12 +17690,40 @@ h1.header__logo-text > a:hover {
 */
 /* # Custom Styles
 ================================================== */
-
-
+  
+  
 /*================================================== */
 /****************  custom code - AM  *****************/
 /*================================================== */
 
-/* Reduce header font size in slider text boxes so text fits box on mobile */
-@media screen and (max-width: 359px)  {
-  h2, .slideshow-with-text .text-slideshow__heading.banner__heading  {  font-size: 32px; } }
+/* 	Reduce header font size in slider text boxes so text fits box on mobile */
+@media (max-width: 359px)  {
+  h2, .slideshow-with-text .text-slideshow__heading.banner__heading  
+  {  
+    font-size: 32px; 
+  } 
+}
+  
+/* styling at bottom of footer with @Parc */
+.footer__content {
+  width: 100%;
+  max-width: none;
+}
+
+/* width of image and text containers on Image With Text cycle quote section */
+.cycle-quote .image-with-text__text-column { width: calc(75% - 20px/2); }
+.cycle-quote .image-with-text__image-column { width: calc(20% - 20px/2); } 
+  
+@media (max-width: 399px) { 
+ .cycle-quote .image-with-text__text-column { width: calc(100% - 20px/2) !important; }
+ .cycle-quote .image-with-text__image-column { width: calc(100% - 20px/2);  } 
+}
+  
+@media  (min-width: 400px) and (max-width: 719px)   { 
+ .cycle-quote .image-with-text__text-column { width: calc(100% - 20px/2) !important; }
+ .cycle-quote .image-with-text__image-column { 
+ 	width: calc(50% - 20px/2) !important;
+	margin: auto !important;
+ } 
+}
+  
